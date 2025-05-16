@@ -3,13 +3,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, m; // K�ch thu?c ma tr?n
+int n, m, Br; // K�ch thu?c ma tr?n
 int a[100][100], d[101][101]={0}; // Ma tr?n d?u v�o
 int dx[4] = {0, -1, 0, 1}; // Hu?ng di chuy?n: T�y, B?c, ��ng, Nam
 int dy[4] = {-1, 0, 1, 0};
 int sx = -1, sy = -1; // T?a d? b?t d?u
 bool vis[100][100] = {0}; // Ma tr?n d�nh d?u c�c � d� tham
-int Br =30, b=0; // Nang lu?ng ban d?u c?a robot
+int b=0; // Nang lu?ng ban d?u c?a robot
 int rx =-1, ry =-1;
 
 stack<pair<int, int>> F; // Stack d? duy?t DFS
@@ -177,7 +177,7 @@ void dfs(int x, int y){
 
 int main() {
     //freopen("grid_matrix.txt", "r", stdin);
-    cin >> n >> m ; // �?c k�ch thu?c ma tr?n v� nang lu?ng ban d?u
+    cin >> n >> m >> Br; // �?c k�ch thu?c ma tr?n v� nang lu?ng ban d?u
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cin >> a[i][j];
