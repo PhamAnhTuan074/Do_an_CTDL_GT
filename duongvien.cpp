@@ -7,7 +7,7 @@ int dx[4] = {0, -1, 0, 1}; // Hu?ng di chuy?n: Tï¿½y, B?c, ï¿½ï¿½ng, Na
 int dy[4] = {-1, 0, 1, 0};
 int sx = -1, sy = -1; // T?a d? b?t d?u
 bool vis[100][100] = {0}; // Ma tr?n dï¿½nh d?u cï¿½c ï¿½ dï¿½ tham
-int Br =30, b=0; // Nang lu?ng ban d?u c?a robot
+int Br, b=0; // Nang lu?ng ban d?u c?a robot
 int rx =-1, ry =-1;
 int lastx =-1, lasty =-1; // T?a d? cu?i c?a robot
 
@@ -191,8 +191,8 @@ void dfs(int x, int y){
 
 
 int main() {
-   // freopen("grid_matrix.txt", "r", stdin);
-    cin >> n >> m ; // ï¿½?c kï¿½ch thu?c ma tr?n vï¿½ nang lu?ng ban d?u
+   freopen("grid_matrix.txt", "r", stdin);
+    cin >> n >> m >> Br ; // ï¿½?c kï¿½ch thu?c ma tr?n vï¿½ nang lu?ng ban d?u
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cin >> a[i][j];
